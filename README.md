@@ -1,6 +1,6 @@
 ## Porque Ruby on Rails?
 
-Apresentação realizada na [Policia Militar da Paraíba] para desmonstrar os benefícios da linguagem Ruby e do framework Rails.
+Apresentação realizada na [Policia Militar da Paraíba] para demonstrar os benefícios da linguagem Ruby e do framework Rails.
 
 [Policia Militar da Paraíba]:<http://www.pm.pb.gov.br/>
 
