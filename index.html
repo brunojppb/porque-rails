@@ -94,7 +94,7 @@ for($x = 0; $x < 10; $x++) {
 # com a data de 2 dias atrás baseado na hora da execução
 # Isso facilita bastante na hora que escrever consultas
 # Ex: Usuários logados nas ultimas 24h
-usuarios_logados_em_24h = User.where("last_loggin < ?", 1.day.ago)
+usuarios_logados_em_24h = User.where("last_loggin > ?", 1.day.ago)
 # PS: metodos adicionados com o uso do ActiveSupport
 # provido pelo Framework Rails
 						</code></pre>
@@ -112,7 +112,7 @@ usuarios_logados_em_24h = User.where("last_loggin < ?", 1.day.ago)
 						<p class="fragment highlight-red" style="font-size: 30px">Gerenciador de Dependencias</p>
 						<p class="fragment highlight-red" style="font-size: 30px">Criação de JSON APIs</p>
 						<p class="fragment highlight-red" style="font-size: 30px">Caching de requisições(Uso de memcache já default)</p>
-						<p class="fragment highlight-red" style="font-size: 30px">Poderoso ORM(Object Relational Mapper)</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Poderoso ORM(Object Relational Mapping)</p>
 					</section>
 				</section>
 
