@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Porque usar o Rails?</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Porque usar o Rails?</h3>
+					<img src="img/rails.png" alt="" height="30%" width="30%"/>
+
+				</section>
+
+				<section>
+					<h2>O que é o Rails?</h2>
+					<p>
+						Framework de desenvolvimento ágil focado em aplicações Web com diversas funcionalides já testadas e aprovadas por grandes empresas.
+					</p>
+					<small>Ex. Twitter, Groupon, Airbnb, Github, Kickstarter e Shopify</small>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Caracteristicas</h2>
+						<p>Utiliza a linguagem Ruby.</p>
+						<div class="">
+							<img src="img/ruby.png" alt="" height="30%" width="30%"/>
+						</div>
+						<br>
+					</section>
+					<section>
+						<h2>Alto nível de abstração</h2>
+						<p>A sintaxe Ruby é mais "Humana".</p>
+						<small>Código mais legível == Maior produtividade</small>
+						<pre><code class="ruby" data-trim contenteditable>
+# Programa Ruby.
+['bruno', 'joven', 'geovanny', 'diogenes'].each do |nome|
+ puts "Olá, eu sou #{nome}" if nome == 'bruno'
+end
+						</code></pre>
+						<pre><code class="php" data-trim contenteditable>
+// Programa PHP.
+var $nomes = array("bruno", "joven", "geovanny", "diogenes");
+for($x = 0; $x < 10; $x++) {
+  if($nomes[$x] == "bruno") {
+    echo "Olá, eu sou $nomes[$x]";
+  }
+}
+						</code></pre>
+					</section>
+					<section>
+						<h2>Orientado a Objetos</h2>
+						<p>Tudo em Ruby é objeto.</p>
+						<pre><code class="ruby" data-trim contenteditable>
+# Programa Ruby.
+2.days.ago
+# vai nos retornar um objeto do tipo TimeWithZone
+# com a data de 2 dias atrás baseado na hora da execução
+# Isso facilita bastante na hora que escrever consultas
+# Ex: Usuários logados nas ultimas 24h
+usuarios_logados_em_24h = User.where("last_loggin < ?", 1.day.ago)
+# PS: metodos adicionados com o uso do ActiveSupport
+# provido pelo Framework Rails
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Vantagens do Framework Rails</h2>
+						<p class="fragment highlight-red" style="font-size: 30px">Aplicação de padrões Solidos (MVC, REST, TDD ...)</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Convention Over Configuration</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Middlewares de seguraça(IP Spoofing attacks, Timming Attacks)</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Proteção contra SQL injection</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Proteção de Rotas</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Gerenciador de Dependencias</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Criação de JSON APIs</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Caching de requisições(Uso de memcache já default)</p>
+						<p class="fragment highlight-red" style="font-size: 30px">Poderoso ORM(Object Relational Mapper)</p>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Demo</h2>
+					<p>
+						Aplicação Web para gerenciamento de contatos pessoais.
+					</p>
+				</section>
+
+				<section data-background="img/hoo.gif">
+					<h2>Isso mesmo! Super Rápido!</h2>
+				</section>
+
+				<section>
+					<h2>Obrigado!</h2>
+					Github: <a href="http://www.github.com/brunojppb">brunojppb</a>
+					Twitter: <a href="http://www.twitter.com/brunojppb">@brunojppb</a>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+	</body>
+</html>
